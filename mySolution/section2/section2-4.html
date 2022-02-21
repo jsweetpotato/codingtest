@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = 0;
+        let extra_points = 0;
+        for (let e of arr) {
+          if (e === 1) {
+            extra_points++;
+            answer += extra_points;
+          } else {
+            extra_points = 0;
+          }
+        }
+        return answer;
+      }
+
+      let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>

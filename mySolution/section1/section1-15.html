@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // function solution(s) {
+      //   let answer;
+      //   let mid = Math.ceil(s.length / 2) - 1;
+      //   if (s.length % 2 === 0) {
+      //     answer = s[mid] + s[mid + 1];
+      //   } else answer = s[mid];
+      //   return answer;
+      // }
+
+      // function solution(s) {
+      //   let answer;
+      //   let mid = Math.floor(s.length / 2);
+      //   if (s.length % 2 === 1) answer = s.substring(mid, mid + 1);
+      //   // string.substring(idx1, idx2) => 문자열에서 idx1에 해당하는 문자부터 idx2의 직전까지의 문자를 추출한다.
+      //   else answer = s.substring(mid - 1, mid + 1);
+      //   return answer;
+      // }
+
+      function solution(s) {
+        let answer;
+        let mid = Math.floor(s.length / 2);
+        if (s.length % 2 === 1) answer = s.substr(mid, 1);
+        // string.substr(idx1, idx2) => 문자열에서 idx1에 해당하는 문자부터 idx2의 갯수 만큼 문자를 추출한다.
+        else answer = s.substr(mid - 1, 2);
+        return answer;
+      }
+      console.log(solution("good"));
+    </script>
+  </body>
+</html>

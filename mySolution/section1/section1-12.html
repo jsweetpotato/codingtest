@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // function solution(s) {
+      //   let answer = s.toUpperCase();
+      //   return answer;
+      // }
+
+      function solution(s) {
+        let answer = "";
+        for (let e of s) {
+          let num = e.charCodeAt();
+          // 아스키코드 소문자 - 32 는 해당 대문자이다 ex) a(97) - 32 === A(65)
+          if (num >= 97 && num <= 122) answer += String.fromCharCode(num - 32); // fromCharCode() 아스키 코드 번호로 문자 가져오기
+          else answer += e;
+        }
+        return answer;
+      }
+
+      let str = "ItisTimeToStudy";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

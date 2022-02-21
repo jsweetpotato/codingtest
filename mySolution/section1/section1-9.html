@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // function solution(str) {
+      //   let answer;
+      //   let arr = str.split("");
+      //   for (let i = 0; i < arr.length; i++) if (arr[i] === "A") arr[i] = "#";
+      //   answer = arr.reduce((a, b) => a + b);
+      //   return answer;
+      // }
+
+      function solution(str) {
+        let answer = "";
+        for (e of str) {
+          console.log(e);
+          if (e === "A") answer += "#";
+          else answer += e;
+        }
+        return answer;
+      }
+
+      function solution(str) {
+        let answer = str;
+        str = str.replace(/A/g, "#"); // 복사된 값이 변경됐기 때문에 answer는 바뀌지 않음(str의 주소값과 answer의 주소값이 다름)
+        answer = answer.replace(/A/g, "#"); //answer가 참조하는 주소값을 직접 바꿔줘야함
+        return answer;
+      }
+
+      let str = "BANANA";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // function solution(s) {
+      //   let answer;
+      //   let pattern = /[A-Z]/g;
+      //   // console.log(pattern.exec(s)); // exec 일치하는 하나의 정보(Array) 반환
+      //   answer = s.match(pattern).length;
+      //   return answer;
+      // }
+
+      // function solution(s) {
+      //   let answer = 0;
+      //   let arr = s;
+      //   s = s.split("");
+      //   arr = arr.toLowerCase().split("");
+      //   for (let i = 0; i < s.length; i++) {
+      //     if (s[i] !== arr[i]) answer++;
+      //   }
+      //   return answer;
+      // }
+
+      // function solution(s) {
+      //   let answer = 0;
+      //   for (let e of s) {
+      //     if (e === e.toUpperCase()) answer++;
+      //   }
+      //   return answer;
+      // }
+
+      function solution(s) {
+        let answer = 0;
+        for (let e of s) {
+          let num = e.charCodeAt(); // 아스키 코드로 변환시키는 함수 // 대문자: 65 ~ 90 총 26개, 소문자: 97 ~ 122 총 26개
+          if (num >= 65 && num <= 90) answer++;
+        }
+        return answer;
+      }
+
+      let str = "KoreaTimeGood";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
